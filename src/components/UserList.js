@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchUsers } from '../redux/UsersSlice'
+import { fetchUsers } from '../redux/userSlice';
 
-const UsersLists = () => {
+const UserList = () => {
     const dispatch = useDispatch();
-    const uswers = useSelector((state) => state.users.users);
+    const users = useSelector((state) => state.users.users);
     const loading = useSelector((state) => state.users.loading);
     const error = useSelector((state) => state.users.error);
 
@@ -34,4 +34,4 @@ const UsersLists = () => {
     );  
 };
 
-export default UsersLists;
+export default UserList;
